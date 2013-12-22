@@ -79,6 +79,10 @@ You can also specify a buildpack during app creation:
 $ heroku create myapp --buildpack https://github.com/heroku/heroku-buildpack-ruby
 Buildpack URLs can point to either git repositories or tarballs. Hosting a buildpack on S3 can be a good way to ensure it’s highly available.
 
+Currently using
+
+heroku config:set BUILDPACK_URL=https://github.com/shermes641/heroku-buildpack-play
+
 License
 -------
 
