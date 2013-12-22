@@ -69,6 +69,16 @@ and then:
 
 and you'll see the your chosen play version printed.
 
+Using a custom Buildpack
+
+You can specify an exact version of a buildpack by using a a git revision in your BUILDPACK_URL.
+git://repo.git#master git://repo.git#v1.2.0
+You can override the Heroku default buildpacks by specifying a custom buildpack in the BUILDPACK_URL config var:
+$ heroku config:set BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-ruby
+You can also specify a buildpack during app creation:
+$ heroku create myapp --buildpack https://github.com/heroku/heroku-buildpack-ruby
+Buildpack URLs can point to either git repositories or tarballs. Hosting a buildpack on S3 can be a good way to ensure it’s highly available.
+
 License
 -------
 
